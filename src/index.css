@@ -14,6 +14,10 @@ body {
   background-size: cover;
 }
 
+#root {
+  @apply w-full max-w-screen-2xl;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
