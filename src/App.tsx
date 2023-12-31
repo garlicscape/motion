@@ -1,5 +1,6 @@
 import './App.css';
 import Header from './components/Header';
+import List from './components/List';
 import Navbar from './components/Navbar';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <>
       <Header />
       <Navbar />
+      <List />
     </>
   );
 }
