@@ -2,8 +2,12 @@ import { useContext } from 'react';
 import { PopupContext } from '../context/PopupContext';
 
 export default function Navbar() {
-  const { openPopup } = useContext(PopupContext);
-  const handleButtonClick = () => {
+  const { openPopup, changePopupCategory } = useContext(PopupContext);
+  const handleButtonClick = (
+    e: React.MouseEvent<HTMLButtonElement, MouseEvent>
+  ) => {
+    const clickedButton = e.currentTarget.innerText;
+    changePopupCategory(clickedButton);
     openPopup();
   };
 
