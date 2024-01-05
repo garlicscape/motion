@@ -9,7 +9,6 @@ export default function Header({
 }) {
   const handleClick = (e: React.MouseEvent<HTMLElement>) => {
     const clicked = e.currentTarget.innerHTML;
-    //console.log(e.currentTarget.innerHTML);
     setClickedButton(clicked);
   };
   return (
