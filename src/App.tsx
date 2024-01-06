@@ -41,7 +41,7 @@ function App() {
           setLists={setLists}
         />
       )}
-      <List lists={lists} />
+      <List lists={lists} setLists={setLists} />
     </>
   );
 }
