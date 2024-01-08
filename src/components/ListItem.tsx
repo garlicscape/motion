@@ -10,31 +10,43 @@ export default function ListItem({
   const { id, title, content, clickedButton } = list;
 
   return (
-    <div className='flex justify-between p-2'>
+    <div className='flex justify-between p-2 '>
       {(clickedButton === 'IMAGE' || clickedButton === 'VIDEO') && (
         <div className='flex'>
-          {clickedButton === 'IMAGE' && <img src={content} alt='insertedImg' />}
+          {clickedButton === 'IMAGE' && (
+            <img
+              src={content}
+              alt='insertedImg'
+              className='max-w-80 max-h-80'
+            />
+          )}
           {clickedButton === 'VIDEO' && (
-            <video controls>
+            <video controls className='max-w-96'>
               <source src={content} />
             </video>
           )}
-          <span>{title}</span>
+          <span className='pl-2 text-lg font-bold'>{title}</span>
         </div>
       )}
       {(clickedButton === 'MEMO' || clickedButton === 'TASK') && (
         <div className='flex flex-col'>
-          <span>{title}</span>
-          {clickedButton === 'MEMO' && <span>{content}</span>}
+          <span className='font-bold'>{title}</span>
+          {clickedButton === 'MEMO' && (
+            <span className='my-4 text-lg'>{content}</span>
+          )}
           {clickedButton === 'TASK' && (
-            <div>
-              <input id='content' type='checkbox'></input>
-              <label htmlFor='content'>{content}</label>
+            <div className='flex'>
+              <input id='content' type='checkbox' className='ml-2'></input>
+              <label htmlFor='content' className='pl-2 my-3 text-lg'>
+                {content}
+              </label>
             </div>
           )}
         </div>
       )}
-      <button onClick={() => handleDelete(id)}>X</button>
+      <button className='self-start' onClick={() => handleDelete(id)}>
+        X
+      </button>
     </div>
   );
 }

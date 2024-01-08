@@ -39,7 +39,7 @@ export default function List({
 
   return (
     <>
-      <ul className='mt-7 bg-white w-1/2 h-[500px] rounded-l-lg'>
+      <ul className='mt-7 w-1/2 h-[500px] overflow-y-auto'>
         {lists.map((list, index) => (
           <li
             key={list.id}
@@ -47,6 +47,7 @@ export default function List({
             onDragStart={() => handleDragStart(index)}
             onDragEnter={() => handleDragging(index)}
             onDragEnd={() => handleDragEnd()}
+            className='p-3 mb-1 bg-white rounded-l-2xl'
           >
             <ListItem list={list} handleDelete={hadleDelete} />
           </li>

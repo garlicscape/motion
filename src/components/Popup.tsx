@@ -42,7 +42,7 @@ export default function Popup({
 
   return (
     <div
-      className={`absolute top-64 w-1/3 h-72 bg-gray-200 rounded-lg shadow-2xl`}
+      className={`z-10 absolute top-64 w-1/3 h-72 bg-gray-200 rounded-lg shadow-2xl`}
     >
       <div className='grid grid-cols-3 py-1 '>
         <span className='col-start-2 text-center font-bold text-lg'>
