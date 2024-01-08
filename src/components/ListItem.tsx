@@ -1,5 +1,4 @@
 import { Lists } from '../App';
-//import { HandleList } from './List';
 
 export default function ListItem({
   list,
@@ -14,7 +13,7 @@ export default function ListItem({
     <div className='flex justify-between p-2'>
       {(clickedButton === 'IMAGE' || clickedButton === 'VIDEO') && (
         <div className='flex'>
-          {clickedButton === 'IMAGE' && <img src={content} />}
+          {clickedButton === 'IMAGE' && <img src={content} alt='insertedImg' />}
           {clickedButton === 'VIDEO' && (
             <video controls>
               <source src={content} />
