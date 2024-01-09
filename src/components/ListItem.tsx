@@ -36,8 +36,8 @@ export default function ListItem({
           )}
           {clickedButton === 'TASK' && (
             <div className='flex'>
-              <input id='content' type='checkbox' className='ml-2'></input>
-              <label htmlFor='content' className='pl-2 my-3 text-lg'>
+              <input id={id} type='checkbox' className='ml-2'></input>
+              <label htmlFor={id} className='pl-2 my-3 text-lg'>
                 {content}
               </label>
             </div>

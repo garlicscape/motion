@@ -39,7 +39,7 @@ export default function List({
 
   return (
     <>
-      <ul className='mt-7 w-1/2 h-[500px] overflow-y-auto'>
+      <ul className='mt-7 w-1/2 h-[500px] overflow-y-auto scrollbar-hide'>
         {lists.map((list, index) => (
           <li
             key={list.id}
